@@ -1,0 +1,21 @@
+{
+    "name": "Ali Baba Kebabs",
+    "thumbnailURL": "https://this.might-be-super.fun/314970.jpg",
+    "authors": ["Jorge Lopes", "Eduardo Nunes", "Gonçalo Vidal", "Rafael Pina"],
+    "entrevista": [
+        {"msg": "De onde vem?", "type": "entrevistator"},
+        {"msg": "Bem eu nasci na India e vim para Portugal com 14 anos com os meus pais.", "type": "entrevistado"},
+        {"msg": "Porque que é que vieram para Portugal?", "type": "entrevistator"},
+        {"msg": "Os meus pais queriam sair da India porque as condições lá não eram boas e queriam um melhor futuro para mim e para os meus irmãos.", "type": "entrevistado"},
+        {"msg": "Há quanto anos está em Portugal?", "type": "entrevistator"},
+        {"msg": "Há 10 anos.", "type": "entrevistado"},
+        {"msg": "Tenciona ficar por cá?", "type": "entrevistator"},
+        {"msg": "Sim, não espero voltar para a Índia, maior parte da minha família vive cá.", "type": "entrevistado"},
+        {"msg": "Tem sido difícil para si adaptar-se?", "type": "entrevistator"},
+        {"msg": "Foi difícil aprender português ao início, mas já tinha alguns familiares na zona que nos ajudaram e acabou por correr tudo bem.", "type": "entrevistado"},
+        {"msg": "O que pratica da sua cultura em Portugal?", "type": "entrevistator"},
+        {"msg": "Não sou muito ligado à cultura indiana, um pouco porque vim quando ainda era novo e habituei-me aos costumes portugueses.", "type":"entrevistado"},
+        {"msg": "Já alguma vez se sentiu discriminado no nosso país?", "type":"entrevistador"},
+        {"msg": "Poucas vezes, as pessoas aqui são simpáticas.", "type":"entrevistado"}
+    ]
+}

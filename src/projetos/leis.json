@@ -1,0 +1,13 @@
+{
+    "name": "Leis",
+    "thumbnailURL": "https://this.might-be-super.fun/9ec5df.jpg",
+    "authors": ["João Nunes","João Pereira", "Leandro Morais", "Pedro Gonçalves"],
+    "slideshow": [
+        "https://this.might-be-super.fun/b99299.jpg",
+        "https://this.might-be-super.fun/c94bd9.jpg",
+        "https://this.might-be-super.fun/0d3e91.jpg",
+        "https://this.might-be-super.fun/a9e85e.jpg",
+        "https://this.might-be-super.fun/b10349.jpg",
+        "https://this.might-be-super.fun/c95043.jpg"
+    ]
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Culture</title>
+
+    <!-- Stylesheet -->
+    <link href="/css/materialize.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/custom.min.js" crossorigin="anonymous"></script>
+    <script src="/js/custom2.js" crossorigin="anonymous"></script>
+
+    <!-- Navbar -->
+    <% include ./partials/navbar.ejs %>
+
+    <div class="v ai" id="inicio">
+        <div class="bz">
+            <img src="<%= data.cover ? data.cover : data.thumbnailURL %>" alt="">
+        </div>
+        <div class="header-wrapper c valign-wrapper">
+            <div class="d iv">
+                <h1 style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><%= data.name %></h1>
+            </div>
+        </div>
+    </div>
+
+    <% if(data.address) { %>
+        <div class="v gw valign-wrapper" style="height: 50%">
+            <div class="c ci">
+                <div class="d iv jc offset-m1 ef">
+                    <div class="c"> 
+                        <div class="d iv"><h2 class="section-title">Morada</h2></div>
+                    </div>
+                    <div class="c fb" data-duration="0" data-staggereddelay=".9">
+                        <div class="d iv jo kk fade-in-out" style="margin-left: 34%"> <!-- TRUQUE1 -->
+                            <h4><%= data.address %></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+  
+    <% if(data.description) { %>
+        <div class="v gw valign-wrapper" style="height: 75%">
+            <div class="c ci">
+                <div class="d iv jc offset-m1 ef">
+                    <div class="c fb" data-duration="0" data-staggereddelay=".9">
+                        <div class="d iv jo kk fade-in-out" style="margin-left: 34%"> <!-- TRUQUE1 -->
+                            <h4><%- data.description %></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+
+    <% if(data.videoURL) { %>
+        <div class="v gw valign-wrapper" style="height: 50%">
+            <div class="c ci">
+                <div class="d iv jc offset-m1 ef">
+                    <div class="c"> 
+                        <div class="d iv"><h2 class="section-title">Vídeo</h2></div>
+                    </div>
+                    <div class="c fb" data-duration="0" data-staggereddelay=".9">
+                        <div class="d iv jo kk fade-in-out" style="margin-left: 25.5%"> <!-- TRUQUE1 -->
+                            <iframe src="<%= data.videoURL %>" width="640" height="360" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+
+    <% if(data.slideshow && data.slideshow.length > 1) {%>
+        <style>
+
+        .slideshow {
+            box-sizing: border-box;
+            margin-top: 15px;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        </style>
+
+        <div class="slideshow">
+            <!-- SLIDESHAREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <% let len = data.slideshow.length; %>
+                <% for(let idx=0; idx<len; idx++) { %>
+                    <div class="mySlides">
+                        <div class="numbertext"><%= idx+1 %> / <%= len %></div>
+                        <img src="<%= data.slideshow[idx] %>" style="width: 100%">
+                    </div>
+                <% } %>
+        
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)" style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">&#10095;</a>
+        
+                <!-- Thumbnail images -->
+                <div class="row">
+                    <% for(let idx=0; idx<len; idx++) { %>
+                        <div class="column">
+                            <img class="demo cursor" src="<%= data.slideshow[idx] %>" style="width:100%" onclick="currentSlide(`<%= idx+1 %>`)">
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+  
+        <script>
+        
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                slideIndex += parseInt(n);
+                showSlides(slideIndex);
+            }
+            function currentSlide(n) {
+                slideIndex = parseInt(n);
+                showSlides(slideIndex);
+            }
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        
+            $(document).keydown(function(e) {
+                switch(e.which) {
+                    case 37: // left
+                      plusSlides(-1);
+                    break;
+
+                    case 39: // right
+                      plusSlides(1);
+                    break;
+
+                    default: return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+        </script>
+    
+    <% } %>
+
+    <% if(data.entrevista) { %>
+        <style>
+            .batata {
+                position: relative;
+                border: 2px solid #dedede;
+                background-color: #f1f1f1;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 10px 0;
+                width: 65%;
+                margin-left:20%;
+            }
+
+            .batatadarker {
+                border-color: #ccc;
+                background-color: #cccccc;
+            }
+            .batatadarker p{
+                position:relative;
+                text-align:right;
+                width:100vw;
+            }
+
+            
+            .batata::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .batata img {
+                float: left;
+                max-width: 60px;
+                width: 100%;
+                margin-right: 20px;
+                border-radius: 50%;
+            }
+
+            .batata img.right {
+                float: right;
+                margin-left: 20px;
+                margin-right:0;
+            }
+            
+            .batata p {
+                color: black;
+            }
+        </style>
+        <% for(const idx in data.entrevista) { %>
+            <% if(data.entrevista[idx].type === 'entrevistado') { %>
+                <div class="batata">
+                    <img src="<%= data[data.entrevista[idx].type] ? (data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png') : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" alt="Avatar" style="width:100%;">
+                    <p><%= data.entrevista[idx].msg %></p>
+                </div>
+            <% } else {%>
+                <div class="batata batatadarker">
+                    <img src="<%= data[data.entrevista[idx].type] ? (data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png') : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" %>" class="right" style="width:100%;font-align=right">
+                    <p><%= data.entrevista[idx].msg %></p>
+                </div>
+            <% } %>
+        <% } %>
+    <% } %>
+
+    <!-- Footer -->
+    <% include ./partials/footer.ejs %>
+    </body>
+</html>

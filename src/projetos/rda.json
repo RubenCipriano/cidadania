@@ -1,0 +1,18 @@
+{
+		"name": "RDA Cultural Association",
+		"thumbnailURL": "https://this.might-be-super.fun/44d612.png",
+    "authors": ["Daniel Antunes", "Miguel Parreiras", "Frederico Fernandes", "Miguel Miguel", "Afonso Brites"],
+    "entrevista": [
+			{"msg": "What made you want to start a new life in another country?", "type": "entrevistator"},
+			{"msg": "Pakistan isn't safe. The streets are full of danger, and even the schools are dangerous. There's a lot of theft and robberies, but the most dangerous thing, it's the war itself, the gunfights and screans wouldnt let me sleep at night. I couldn't live there for much longer, so i decided to leave it all behind.", "type": "entrevistado"},
+			{"msg": "What made you choose the UK as a location to move to?", "type": "entrevistator"},
+			{"msg": "People are friendly here, and the country is so peaceful.", "type": "entrevistado"},
+			{"msg": "Why do you frequent this place?", "type": "entrevistator"},
+			{"msg": "It has a ladeback environment with people coming in and out. Locals come here to not only eat but have long talks with like minded people and meet new fresh faces. It's a great place to visit from now and then.", "type": "entrevistado"},
+			{"msg": "How easy has it been to make a new life for yourself here?", "type": "entrevistator"},
+			{"msg": "Wans't easy at first, when i got here i didnt know how to speak Portuguese, i was hungry, and had no money, work hard pays hard, I have some immigrant friends that gave me a house to stay untill i was jobless. But then i had to learn the language and try finding a job, me and my brother after a while got sattle down by here (Lisbon).", "type": "entrevistado"},
+			{"msg": "Have you got any plans to go back home, or do you think you'll stay in Portugal?", "type": "entrevistator"},
+			{"msg": "It's a 50/50, i love being here, people are so nice, i have a stable job, a house, friends... But still i continue to love my country and feel sad to whats happening to it. Only time will tell", "type": "entrevistado"}
+    ],
+    "description": "Jamshed de 25 anos é do noroeste de Paquistão, actualmente está a viver em Lisboa com o seu irmão Naveed de 19 anos, chegou a Portugal à 2 anos atrás e trabalha como pedreido.<br>Felizmente conseguio arranjar casa com a ajuda de uns amigos que tambem migraram, com isso tem conseguido estabilidade financeira."
+}

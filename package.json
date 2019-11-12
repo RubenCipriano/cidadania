@@ -1,0 +1,25 @@
+{
+  "name": "cidadania-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rub1Games/webiste.git"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rub1Games/webiste/issues"
+  },
+  "homepage": "https://github.com/Rub1Games/webiste#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1"
+  }
+}

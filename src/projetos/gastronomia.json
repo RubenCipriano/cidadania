@@ -1,0 +1,18 @@
+{
+    "name": "Gastronomia Asiática",
+    "thumbnailURL": "https://this.might-be-super.fun/46dba3.jpg",
+    "cover": "https://this.might-be-super.fun/7af212.jpg",
+    "authors": ["Henrique Ramos","Eduardo Andrade","Vasco Roque","João Eleuterio"],
+    "slideshow": [
+        "https://this.might-be-super.fun/0ddd1d.jpg",
+        "https://this.might-be-super.fun/8cec2d.jpg",
+        "https://this.might-be-super.fun/cece23.jpg",
+        "https://this.might-be-super.fun/5fe23b.jpg",
+        "https://this.might-be-super.fun/fe1e4b.jpg",
+        "https://this.might-be-super.fun/30f2b7.jpg",
+        "https://this.might-be-super.fun/ad6da1.jpg",
+        "https://this.might-be-super.fun/029dcf.jpg",
+        "https://this.might-be-super.fun/9fa60c.jpg",
+        "https://this.might-be-super.fun/01384c.jpg"
+    ]
+}

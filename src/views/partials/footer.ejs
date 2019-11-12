@@ -1,0 +1,32 @@
+<footer class="page-footer">
+    <div class="dv">
+        <div class="c">
+        <div class="d ka ko">
+            <a href="http://www.inete.net/"><img style="width:200px;margin-left:-10px;" src="https://this.might-be-super.fun/e01dad.png" alt=""></a>
+            <p>Made with &lt;3 by Ruben and Lucas.</p>
+        </div>
+        <div class="d ka ko">
+            <h5>Projetos</h5>
+            <ul>
+                <% for(let projeto of projetos) { %>
+                    <li><a href="/projeto/<%= projeto.name %>"><%= projeto.content.name %></a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="d ka ko">
+            <h5>Conexões</h5>
+            <ul>
+                <li><a href="http://www.inete.net/">INETE</a></li>
+                <li><a href="/github">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="d ka ko">
+            <h5>Contacto</h5>
+            <ul>
+                <li><a href="https://www.facebook.com/inete.pt/">Facebook</a></li>
+                <li><a href="mailto:rubencipriano13@gmail.com">Email</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</footer>
